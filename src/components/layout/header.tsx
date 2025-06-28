@@ -49,12 +49,7 @@ export function Header() {
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center gap-2">
-            <img 
-              src="/.bolt/assets/Screenshot 2025-06-28 at 18.35.00.png" 
-              alt="Traidant Logo" 
-              className="w-12 h-12 rounded-lg object-cover"
-            />
+          <div className="flex items-center">
             <span className="text-xl font-bold text-gray-900">Traidant</span>
           </div>
 
