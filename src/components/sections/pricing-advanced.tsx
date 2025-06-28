@@ -66,60 +66,64 @@ const traidantPlans = [
 
 export function PricingAdvancedSection() {
   return (
-    <section className="py-24 bg-gradient-to-br from-gray-50 via-white to-gray-50 relative overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute top-0 left-0 w-72 h-72 bg-blue-500/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl" />
+    <section className="w-full py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-gray-50 via-white to-gray-50 relative overflow-hidden">
+      {/* Background Elements - Full width */}
+      <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-white to-gray-50" />
+      <div className="absolute top-0 left-0 w-full h-72 bg-blue-500/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 right-0 w-full h-96 bg-purple-500/5 rounded-full blur-3xl" />
+      <div className="absolute top-1/2 left-0 w-full h-64 bg-cyan-500/3 rounded-full blur-2xl" />
       
-      <div className="container mx-auto px-6 relative z-10">
-        {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center max-w-3xl mx-auto mb-8"
-        >
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-50 to-purple-50 border border-blue-200 rounded-full text-sm font-medium text-blue-700 mb-6">
-            <Zap className="w-4 h-4" />
-            Flexible Pricing Options
-          </div>
-        </motion.div>
+      <div className="w-full px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="max-w-7xl mx-auto">
+          {/* Section Header */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center max-w-4xl mx-auto mb-8 lg:mb-12"
+          >
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-50 to-purple-50 border border-blue-200 rounded-full text-sm font-medium text-blue-700 mb-6">
+              <Zap className="w-4 h-4" />
+              Flexible Pricing Options
+            </div>
+          </motion.div>
 
-        <Pricing 
-          plans={traidantPlans}
-          title="Choose Your Investment Journey"
-          description="Start free and upgrade when you're ready to unlock the full potential of AI-powered investing.
+          <Pricing 
+            plans={traidantPlans}
+            title="Choose Your Investment Journey"
+            description="Start free and upgrade when you're ready to unlock the full potential of AI-powered investing.
 All plans include access to our platform and dedicated support."
-        />
+          />
 
-        {/* Value Proposition */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="text-center mt-16 max-w-4xl mx-auto"
-        >
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="space-y-2">
-              <div className="text-2xl font-bold text-gray-900">98.7%</div>
-              <div className="text-sm text-gray-600">AI Prediction Accuracy</div>
+          {/* Value Proposition */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+            className="text-center mt-12 lg:mt-16 max-w-6xl mx-auto"
+          >
+            <div className="grid sm:grid-cols-3 gap-6 lg:gap-8">
+              <div className="space-y-2 p-6 bg-white/80 backdrop-blur-sm rounded-2xl border border-gray-200 shadow-sm">
+                <div className="text-2xl lg:text-3xl font-bold text-gray-900">98.7%</div>
+                <div className="text-sm lg:text-base text-gray-600">AI Prediction Accuracy</div>
+              </div>
+              <div className="space-y-2 p-6 bg-white/80 backdrop-blur-sm rounded-2xl border border-gray-200 shadow-sm">
+                <div className="text-2xl lg:text-3xl font-bold text-gray-900">$2.4B+</div>
+                <div className="text-sm lg:text-base text-gray-600">Assets Under Management</div>
+              </div>
+              <div className="space-y-2 p-6 bg-white/80 backdrop-blur-sm rounded-2xl border border-gray-200 shadow-sm">
+                <div className="text-2xl lg:text-3xl font-bold text-gray-900">15K+</div>
+                <div className="text-sm lg:text-base text-gray-600">Active Investors</div>
+              </div>
             </div>
-            <div className="space-y-2">
-              <div className="text-2xl font-bold text-gray-900">$2.4B+</div>
-              <div className="text-sm text-gray-600">Assets Under Management</div>
-            </div>
-            <div className="space-y-2">
-              <div className="text-2xl font-bold text-gray-900">15K+</div>
-              <div className="text-sm text-gray-600">Active Investors</div>
-            </div>
-          </div>
-          
-          <p className="text-gray-600 mt-8 text-lg">
-            Join thousands of successful investors who trust Traidant's AI to grow their wealth.
-          </p>
-        </motion.div>
+            
+            <p className="text-gray-600 mt-8 text-lg lg:text-xl max-w-3xl mx-auto leading-relaxed">
+              Join thousands of successful investors who trust Traidant's AI to grow their wealth.
+            </p>
+          </motion.div>
+        </div>
       </div>
     </section>
   );
