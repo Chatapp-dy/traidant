@@ -11,12 +11,16 @@ export function CTASection() {
   const [showForm, setShowForm] = useState(false);
 
   return (
-    <section className="py-24 bg-gradient-to-br from-gray-900 via-black to-gray-900 relative overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute top-0 left-0 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl" />
-      <div className="absolute top-1/2 left-1/4 w-64 h-64 bg-cyan-500/5 rounded-full blur-2xl" />
-      <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-purple-500/5 rounded-full blur-xl" />
+    <section className="w-full min-h-screen py-24 bg-gradient-to-br from-gray-900 via-black to-gray-900 relative overflow-hidden">
+      {/* Background Elements - Extended to cover full width */}
+      <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-black to-gray-900" />
+      <div className="absolute top-0 left-0 w-full h-72 bg-blue-500/10 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 right-0 w-full h-96 bg-purple-500/10 rounded-full blur-3xl" />
+      <div className="absolute top-1/2 left-0 w-full h-64 bg-cyan-500/5 rounded-full blur-2xl" />
+      <div className="absolute bottom-1/4 right-0 w-full h-48 bg-purple-500/5 rounded-full blur-xl" />
+      
+      {/* Additional background coverage */}
+      <div className="absolute inset-0 bg-gradient-to-r from-gray-900/50 via-transparent to-gray-900/50" />
       
       {/* Floating Particles */}
       <div className="absolute top-20 left-10 w-2 h-2 bg-blue-500 rounded-full animate-pulse" />
@@ -24,8 +28,10 @@ export function CTASection() {
       <div className="absolute bottom-40 left-20 w-1.5 h-1.5 bg-cyan-500 rounded-full animate-bounce" />
       <div className="absolute top-60 right-40 w-1 h-1 bg-pink-500 rounded-full animate-pulse" style={{ animationDelay: '1s' }} />
       <div className="absolute bottom-60 left-40 w-1.5 h-1.5 bg-yellow-500 rounded-full animate-ping" style={{ animationDelay: '0.5s' }} />
+      <div className="absolute top-32 left-1/2 w-1 h-1 bg-green-500 rounded-full animate-bounce" style={{ animationDelay: '1.5s' }} />
+      <div className="absolute bottom-32 right-1/2 w-1.5 h-1.5 bg-orange-500 rounded-full animate-pulse" style={{ animationDelay: '2s' }} />
       
-      <div className="w-full px-6 relative z-10">
+      <div className="w-full px-4 sm:px-6 lg:px-8 relative z-10">
         {!showForm ? (
           /* Main CTA */
           <motion.div
@@ -36,7 +42,7 @@ export function CTASection() {
             className="max-w-7xl mx-auto text-center"
           >
             {/* Social Proof */}
-            <div className="flex justify-center items-center gap-8 mb-12">
+            <div className="flex flex-col sm:flex-row justify-center items-center gap-6 sm:gap-8 mb-12">
               <div className="flex items-center gap-2">
                 <div className="flex -space-x-2">
                   {[1, 2, 3, 4].map((i) => (
@@ -55,7 +61,7 @@ export function CTASection() {
             </div>
 
             {/* Main Heading */}
-            <h2 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white mb-8 leading-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-8 leading-tight px-4">
               Ready to Transform
               <br />
               <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
@@ -63,19 +69,19 @@ export function CTASection() {
               </span>
             </h2>
 
-            <p className="text-xl lg:text-2xl text-gray-300 mb-16 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-lg sm:text-xl lg:text-2xl text-gray-300 mb-16 max-w-4xl mx-auto leading-relaxed px-4">
               Join thousands of successful investors who trust Traidant's AI to grow their wealth. 
               Start with our free plan or unlock premium features with industry-leading accuracy.
             </p>
 
             {/* Enhanced Stats Grid */}
-            <div className="grid md:grid-cols-3 gap-8 lg:gap-16 mb-16 max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 xl:gap-16 mb-16 max-w-6xl mx-auto px-4">
               <motion.div 
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10"
+                className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300"
               >
                 <div className="flex items-center justify-center gap-3 mb-4">
                   <Shield className="w-8 h-8 text-green-400" />
@@ -90,7 +96,7 @@ export function CTASection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.3 }}
-                className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10"
+                className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300"
               >
                 <div className="flex items-center justify-center gap-3 mb-4">
                   <Users className="w-8 h-8 text-blue-400" />
@@ -105,7 +111,7 @@ export function CTASection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.4 }}
-                className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10"
+                className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300"
               >
                 <div className="flex items-center justify-center gap-3 mb-4">
                   <TrendingUp className="w-8 h-8 text-purple-400" />
@@ -122,7 +128,7 @@ export function CTASection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.5 }}
-              className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12"
+              className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12 px-4"
             >
               <motion.div
                 whileHover={{ scale: 1.05 }}
@@ -131,10 +137,10 @@ export function CTASection() {
                 <Button 
                   size="lg"
                   onClick={() => setShowForm(true)}
-                  className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-12 py-6 text-xl font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group"
+                  className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 sm:px-12 py-4 sm:py-6 text-lg sm:text-xl font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group w-full sm:w-auto"
                 >
                   Start Your Journey
-                  <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="ml-3 w-5 sm:w-6 h-5 sm:h-6 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </motion.div>
 
@@ -146,14 +152,14 @@ export function CTASection() {
                   variant="outline"
                   size="lg"
                   onClick={() => window.open('/demo.html', '_blank')}
-                  className="border-2 border-white/30 hover:border-white/50 text-white hover:bg-white/10 px-12 py-6 text-xl font-semibold rounded-xl backdrop-blur-sm transition-all duration-300"
+                  className="border-2 border-white/30 hover:border-white/50 text-white hover:bg-white/10 px-8 sm:px-12 py-4 sm:py-6 text-lg sm:text-xl font-semibold rounded-xl backdrop-blur-sm transition-all duration-300 w-full sm:w-auto"
                 >
                   Watch Demo
                 </Button>
               </motion.div>
             </motion.div>
 
-            <p className="text-sm text-gray-400">
+            <p className="text-sm text-gray-400 px-4">
               Start free • No credit card required • Upgrade anytime • 14-day premium trial
             </p>
 
@@ -163,9 +169,9 @@ export function CTASection() {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.7 }}
-              className="mt-16 pt-8 border-t border-white/10"
+              className="mt-16 pt-8 border-t border-white/10 px-4"
             >
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 max-w-4xl mx-auto">
                 <div className="text-center">
                   <div className="text-lg font-bold text-white mb-1">0.003s</div>
                   <div className="text-xs text-gray-400">Response Time</div>
