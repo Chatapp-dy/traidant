@@ -1,0 +1,34 @@
+<svg width="16" height="16" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Simplified version for ICO format -->
+  <defs>
+    <linearGradient id="antGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Ant head -->
+  <ellipse cx="16" cy="8" rx="4" ry="3.5" fill="url(#antGradient)"/>
+  
+  <!-- Ant thorax -->
+  <ellipse cx="16" cy="15" rx="3.5" ry="4" fill="#1e40af"/>
+  
+  <!-- Ant abdomen -->
+  <ellipse cx="16" cy="23" rx="4.5" ry="5" fill="url(#antGradient)"/>
+  
+  <!-- Antennae -->
+  <path d="M14 6 L11 3" stroke="#3b82f6" stroke-width="2" stroke-linecap="round"/>
+  <path d="M18 6 L21 3" stroke="#3b82f6" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- Eyes -->
+  <circle cx="14" cy="7.5" r="1" fill="white"/>
+  <circle cx="18" cy="7.5" r="1" fill="white"/>
+  
+  <!-- Legs (simplified) -->
+  <path d="M13 13 L8 11" stroke="#1e40af" stroke-width="2"/>
+  <path d="M19 13 L24 11" stroke="#1e40af" stroke-width="2"/>
+  <path d="M12 16 L6 18" stroke="#1e40af" stroke-width="2"/>
+  <path d="M20 16 L26 18" stroke="#1e40af" stroke-width="2"/>
+  <path d="M13 21 L8 25" stroke="#1e40af" stroke-width="2"/>
+  <path d="M19 21 L24 25" stroke="#1e40af" stroke-width="2"/>
+</svg>
