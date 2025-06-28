@@ -15,8 +15,17 @@ export function CTASection() {
       {/* Background Elements */}
       <div className="absolute top-0 left-0 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl" />
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl" />
+      <div className="absolute top-1/2 left-1/4 w-64 h-64 bg-cyan-500/5 rounded-full blur-2xl" />
+      <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-purple-500/5 rounded-full blur-xl" />
       
-      <div className="container mx-auto px-6 relative z-10">
+      {/* Floating Particles */}
+      <div className="absolute top-20 left-10 w-2 h-2 bg-blue-500 rounded-full animate-pulse" />
+      <div className="absolute top-40 right-20 w-1 h-1 bg-purple-500 rounded-full animate-ping" />
+      <div className="absolute bottom-40 left-20 w-1.5 h-1.5 bg-cyan-500 rounded-full animate-bounce" />
+      <div className="absolute top-60 right-40 w-1 h-1 bg-pink-500 rounded-full animate-pulse" style={{ animationDelay: '1s' }} />
+      <div className="absolute bottom-60 left-40 w-1.5 h-1.5 bg-yellow-500 rounded-full animate-ping" style={{ animationDelay: '0.5s' }} />
+      
+      <div className="w-full px-6 relative z-10">
         {!showForm ? (
           /* Main CTA */
           <motion.div
@@ -24,7 +33,7 @@ export function CTASection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="max-w-4xl mx-auto text-center"
+            className="max-w-7xl mx-auto text-center"
           >
             {/* Social Proof */}
             <div className="flex justify-center items-center gap-8 mb-12">
@@ -46,53 +55,135 @@ export function CTASection() {
             </div>
 
             {/* Main Heading */}
-            <h2 className="text-4xl lg:text-6xl font-bold text-white mb-6">
+            <h2 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white mb-8 leading-tight">
               Ready to Transform
               <br />
-              <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
                 Your Investment Strategy?
               </span>
             </h2>
 
-            <p className="text-xl text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-xl lg:text-2xl text-gray-300 mb-16 max-w-4xl mx-auto leading-relaxed">
               Join thousands of successful investors who trust Traidant's AI to grow their wealth. 
-              Start with our free plan or unlock premium features.
+              Start with our free plan or unlock premium features with industry-leading accuracy.
             </p>
 
-            {/* Trust Indicators */}
-            <div className="grid md:grid-cols-3 gap-6 mb-12">
-              <div className="flex items-center justify-center gap-3 text-gray-300">
-                <Shield className="w-6 h-6 text-green-400" />
-                <span>SEC Registered</span>
-              </div>
-              <div className="flex items-center justify-center gap-3 text-gray-300">
-                <Users className="w-6 h-6 text-blue-400" />
-                <span>FINRA Member</span>
-              </div>
-              <div className="flex items-center justify-center gap-3 text-gray-300">
-                <TrendingUp className="w-6 h-6 text-purple-400" />
-                <span>SIPC Protected</span>
-              </div>
+            {/* Enhanced Stats Grid */}
+            <div className="grid md:grid-cols-3 gap-8 lg:gap-16 mb-16 max-w-5xl mx-auto">
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10"
+              >
+                <div className="flex items-center justify-center gap-3 mb-4">
+                  <Shield className="w-8 h-8 text-green-400" />
+                  <span className="text-2xl font-bold text-white">98.7%</span>
+                </div>
+                <div className="text-gray-300 font-medium">AI Prediction Accuracy</div>
+                <div className="text-sm text-gray-400 mt-2">SEC Registered & Compliant</div>
+              </motion.div>
+              
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10"
+              >
+                <div className="flex items-center justify-center gap-3 mb-4">
+                  <Users className="w-8 h-8 text-blue-400" />
+                  <span className="text-2xl font-bold text-white">$2.4B+</span>
+                </div>
+                <div className="text-gray-300 font-medium">Assets Under Management</div>
+                <div className="text-sm text-gray-400 mt-2">FINRA Member Protection</div>
+              </motion.div>
+              
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10"
+              >
+                <div className="flex items-center justify-center gap-3 mb-4">
+                  <TrendingUp className="w-8 h-8 text-purple-400" />
+                  <span className="text-2xl font-bold text-white">15K+</span>
+                </div>
+                <div className="text-gray-300 font-medium">Active Investors</div>
+                <div className="text-sm text-gray-400 mt-2">SIPC Protected Accounts</div>
+              </motion.div>
             </div>
 
-            {/* Main CTA Button */}
+            {/* Enhanced CTA Buttons */}
             <motion.div
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+              className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12"
             >
-              <Button 
-                size="lg"
-                onClick={() => setShowForm(true)}
-                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-12 py-6 text-xl font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group"
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
-                Start Your Journey
-                <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-1 transition-transform" />
-              </Button>
+                <Button 
+                  size="lg"
+                  onClick={() => setShowForm(true)}
+                  className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-12 py-6 text-xl font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group"
+                >
+                  Start Your Journey
+                  <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </motion.div>
+
+              <motion.div
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+              >
+                <Button 
+                  variant="outline"
+                  size="lg"
+                  onClick={() => window.open('/demo.html', '_blank')}
+                  className="border-2 border-white/30 hover:border-white/50 text-white hover:bg-white/10 px-12 py-6 text-xl font-semibold rounded-xl backdrop-blur-sm transition-all duration-300"
+                >
+                  Watch Demo
+                </Button>
+              </motion.div>
             </motion.div>
 
-            <p className="text-sm text-gray-400 mt-6">
-              Start free • No credit card required • Upgrade anytime
+            <p className="text-sm text-gray-400">
+              Start free • No credit card required • Upgrade anytime • 14-day premium trial
             </p>
+
+            {/* Additional Trust Indicators */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.7 }}
+              className="mt-16 pt-8 border-t border-white/10"
+            >
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+                <div className="text-center">
+                  <div className="text-lg font-bold text-white mb-1">0.003s</div>
+                  <div className="text-xs text-gray-400">Response Time</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-lg font-bold text-white mb-1">24/7</div>
+                  <div className="text-xs text-gray-400">Market Monitoring</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-lg font-bold text-white mb-1">256-bit</div>
+                  <div className="text-xs text-gray-400">Encryption</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-lg font-bold text-white mb-1">99.9%</div>
+                  <div className="text-xs text-gray-400">Uptime SLA</div>
+                </div>
+              </div>
+            </motion.div>
           </motion.div>
         ) : (
           /* Subscription Form */
