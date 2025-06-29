@@ -28,9 +28,9 @@ export function HeroSection() {
       <div className="absolute bottom-60 left-40 w-1.5 h-1.5 bg-yellow-500 rounded-full animate-ping" style={{ animationDelay: '0.5s' }} />
       <div className="absolute top-32 left-1/2 w-1 h-1 bg-green-500 rounded-full animate-bounce" style={{ animationDelay: '1.5s' }} />
 
-      <div className="w-full px-6 sm:px-8 lg:px-12 xl:px-16 2xl:px-24 relative z-10">
-        <div className="w-full">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 xl:gap-24 2xl:gap-32 items-center">
+      <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 relative z-10">
+        <div className="max-w-[1600px] mx-auto">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 2xl:gap-24 items-center">
             {/* Left Content */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
@@ -70,7 +70,7 @@ export function HeroSection() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.4 }}
-                  className="text-lg sm:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl text-gray-600 leading-relaxed"
+                  className="text-lg sm:text-xl lg:text-2xl xl:text-3xl text-gray-600 leading-relaxed"
                 >
                   Transform your investment strategy with Traidant's cutting-edge AI models. 
                   Get intelligent insights, automated analysis, and superior returns.
@@ -82,18 +82,18 @@ export function HeroSection() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5 }}
-                className="grid grid-cols-3 gap-4 sm:gap-6 lg:gap-8 xl:gap-12 2xl:gap-16"
+                className="grid grid-cols-3 gap-4 sm:gap-6 lg:gap-8 xl:gap-12"
               >
                 <div className="text-center lg:text-left">
-                  <div className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold text-gray-900">98.7%</div>
+                  <div className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900">98.7%</div>
                   <div className="text-sm lg:text-base xl:text-lg text-gray-500">Accuracy Rate</div>
                 </div>
                 <div className="text-center lg:text-left">
-                  <div className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold text-gray-900">$2.4B+</div>
+                  <div className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900">$2.4B+</div>
                   <div className="text-sm lg:text-base xl:text-lg text-gray-500">Assets Managed</div>
                 </div>
                 <div className="text-center lg:text-left">
-                  <div className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold text-gray-900">15K+</div>
+                  <div className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900">15K+</div>
                   <div className="text-sm lg:text-base xl:text-lg text-gray-500">Active Users</div>
                 </div>
               </motion.div>
@@ -103,21 +103,21 @@ export function HeroSection() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6 }}
-                className="flex flex-col sm:flex-row gap-4 lg:gap-6 xl:gap-8 justify-center lg:justify-start"
+                className="flex flex-col sm:flex-row gap-4 lg:gap-6 justify-center lg:justify-start"
               >
                 <Button 
                   size="lg" 
                   onClick={scrollToPricing}
-                  className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 sm:px-8 lg:px-10 xl:px-12 py-3 sm:py-4 lg:py-5 xl:py-6 text-base sm:text-lg lg:text-xl xl:text-2xl font-semibold group w-full sm:w-auto"
+                  className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 sm:px-8 lg:px-10 py-3 sm:py-4 lg:py-5 text-base sm:text-lg lg:text-xl font-semibold group w-full sm:w-auto"
                 >
                   Explore Subscriptions
-                  <ArrowRight className="ml-2 w-4 sm:w-5 lg:w-6 xl:w-7 h-4 sm:h-5 lg:h-6 xl:h-7 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="ml-2 w-4 sm:w-5 lg:w-6 h-4 sm:h-5 lg:h-6 group-hover:translate-x-1 transition-transform" />
                 </Button>
                 <Button 
                   variant="outline" 
                   size="lg"
                   onClick={openDemo}
-                  className="border-2 border-gray-300 hover:border-gray-400 px-6 sm:px-8 lg:px-10 xl:px-12 py-3 sm:py-4 lg:py-5 xl:py-6 text-base sm:text-lg lg:text-xl xl:text-2xl font-semibold w-full sm:w-auto"
+                  className="border-2 border-gray-300 hover:border-gray-400 px-6 sm:px-8 lg:px-10 py-3 sm:py-4 lg:py-5 text-base sm:text-lg lg:text-xl font-semibold w-full sm:w-auto"
                 >
                   Watch Demo
                 </Button>
@@ -128,14 +128,14 @@ export function HeroSection() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.8 }}
-                className="flex items-center justify-center lg:justify-start gap-6 lg:gap-8 xl:gap-10 pt-4"
+                className="flex items-center justify-center lg:justify-start gap-6 lg:gap-8 pt-4"
               >
-                <div className="flex items-center gap-2 text-sm lg:text-base xl:text-lg text-gray-500">
-                  <TrendingUp className="w-4 h-4 lg:w-5 lg:h-5 xl:w-6 xl:h-6 text-green-500" />
+                <div className="flex items-center gap-2 text-sm lg:text-base text-gray-500">
+                  <TrendingUp className="w-4 h-4 lg:w-5 lg:h-5 text-green-500" />
                   SEC Compliant
                 </div>
-                <div className="flex items-center gap-2 text-sm lg:text-base xl:text-lg text-gray-500">
-                  <Brain className="w-4 h-4 lg:w-5 lg:h-5 xl:w-6 xl:h-6 text-blue-500" />
+                <div className="flex items-center gap-2 text-sm lg:text-base text-gray-500">
+                  <Brain className="w-4 h-4 lg:w-5 lg:h-5 text-blue-500" />
                   AI-Verified
                 </div>
               </motion.div>
