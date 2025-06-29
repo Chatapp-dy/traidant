@@ -5,8 +5,8 @@ export function Footer() {
     {
       title: 'Product',
       links: [
-        { label: 'Features', href: '#' },
-        { label: 'Pricing', href: '#' },
+        { label: 'Features', href: '/ai-features.html' },
+        { label: 'Pricing', href: '#pricing' },
         { label: 'API', href: '#' },
         { label: 'Documentation', href: '#' }
       ]
@@ -14,7 +14,7 @@ export function Footer() {
     {
       title: 'Company',
       links: [
-        { label: 'About', href: '#' },
+        { label: 'About', href: '/about.html' },
         { label: 'Blog', href: '#' },
         { label: 'Careers', href: '#' },
         { label: 'Press', href: '#' }
@@ -40,34 +40,50 @@ export function Footer() {
     }
   ];
 
+  const handleLinkClick = (href: string) => {
+    if (href === '#pricing') {
+      const pricingSection = document.querySelector('[data-section="pricing"]');
+      if (pricingSection) {
+        pricingSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else if (href.startsWith('/')) {
+      window.location.href = href;
+    } else if (href.startsWith('#')) {
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  };
+
   return (
     <footer className="w-full bg-gray-900 text-white">
-      <div className="w-full px-6 sm:px-8 lg:px-12 xl:px-16 2xl:px-24 py-12 lg:py-16 xl:py-20">
-        <div className="w-full">
-          <div className="grid lg:grid-cols-5 gap-8 lg:gap-12 xl:gap-16 2xl:gap-20">
+      <div className="w-full px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-5 gap-8 lg:gap-12">
             {/* Brand Section */}
             <div className="lg:col-span-1">
-              <div className="flex items-center gap-3 lg:gap-4 mb-6 lg:mb-8">
-                <div className="w-8 h-8 lg:w-10 lg:h-10 xl:w-12 xl:h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                  <Brain className="w-5 h-5 lg:w-6 lg:h-6 xl:w-7 xl:h-7 text-white" />
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                  <Brain className="w-5 h-5 text-white" />
                 </div>
-                <span className="text-xl lg:text-2xl xl:text-3xl font-bold">Traidant</span>
+                <span className="text-xl font-bold">Traidant</span>
               </div>
-              <p className="text-gray-400 mb-6 lg:mb-8 leading-relaxed text-base lg:text-lg xl:text-xl">
+              <p className="text-gray-400 mb-6 leading-relaxed max-w-sm">
                 Empowering investors with AI-driven insights and automated trading solutions for superior returns.
               </p>
-              <div className="flex gap-4 lg:gap-5">
-                <a href="#" className="w-10 h-10 lg:w-12 lg:h-12 xl:w-14 xl:h-14 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gray-700 transition-colors">
-                  <Twitter className="w-5 h-5 lg:w-6 lg:h-6 xl:w-7 xl:h-7" />
+              <div className="flex gap-4">
+                <a href="#" className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gray-700 transition-colors">
+                  <Twitter className="w-5 h-5" />
                 </a>
-                <a href="#" className="w-10 h-10 lg:w-12 lg:h-12 xl:w-14 xl:h-14 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gray-700 transition-colors">
-                  <Linkedin className="w-5 h-5 lg:w-6 lg:h-6 xl:w-7 xl:h-7" />
+                <a href="#" className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gray-700 transition-colors">
+                  <Linkedin className="w-5 h-5" />
                 </a>
-                <a href="#" className="w-10 h-10 lg:w-12 lg:h-12 xl:w-14 xl:h-14 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gray-700 transition-colors">
-                  <Github className="w-5 h-5 lg:w-6 lg:h-6 xl:w-7 xl:h-7" />
+                <a href="#" className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gray-700 transition-colors">
+                  <Github className="w-5 h-5" />
                 </a>
-                <a href="#" className="w-10 h-10 lg:w-12 lg:h-12 xl:w-14 xl:h-14 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gray-700 transition-colors">
-                  <Mail className="w-5 h-5 lg:w-6 lg:h-6 xl:w-7 xl:h-7" />
+                <a href="#" className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gray-700 transition-colors">
+                  <Mail className="w-5 h-5" />
                 </a>
               </div>
             </div>
@@ -75,16 +91,16 @@ export function Footer() {
             {/* Links Sections */}
             {footerSections.map((section) => (
               <div key={section.title} className="lg:col-span-1">
-                <h3 className="font-semibold text-white mb-4 lg:mb-6 text-lg lg:text-xl xl:text-2xl">{section.title}</h3>
-                <ul className="space-y-3 lg:space-y-4">
+                <h3 className="font-semibold text-white mb-4">{section.title}</h3>
+                <ul className="space-y-3">
                   {section.links.map((link) => (
                     <li key={link.label}>
-                      <a 
-                        href={link.href}
-                        className="text-gray-400 hover:text-white transition-colors text-base lg:text-lg xl:text-xl"
+                      <button 
+                        onClick={() => handleLinkClick(link.href)}
+                        className="text-gray-400 hover:text-white transition-colors text-left"
                       >
                         {link.label}
-                      </a>
+                      </button>
                     </li>
                   ))}
                 </ul>
@@ -93,10 +109,13 @@ export function Footer() {
           </div>
 
           {/* Bottom Section */}
-          <div className="border-t border-gray-800 mt-12 lg:mt-16 pt-8 lg:pt-10 text-center">
-            <p className="text-gray-400 text-sm lg:text-base xl:text-lg">
+          <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="text-gray-400 text-sm">
               © 2025 Traidant. All rights reserved.
             </p>
+            <div className="text-sm text-gray-400">
+              University of Amsterdam Student Project
+            </div>
           </div>
         </div>
       </div>

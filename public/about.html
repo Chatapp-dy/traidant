@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - Traidant AI Investment Platform</title>
+    <meta name="description" content="Learn about Traidant's mission, team, and journey as University of Amsterdam students creating the future of AI-powered investment solutions." />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+      
+      body {
+        font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      }
+      
+      .gradient-bg {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      }
+      
+      .pulse-animation {
+        animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+      }
+      
+      @keyframes pulse {
+        0%, 100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: .5;
+        }
+      }
+      
+      .floating {
+        animation: floating 3s ease-in-out infinite;
+      }
+      
+      @keyframes floating {
+        0% {
+          transform: translate(0, 0px);
+        }
+        50% {
+          transform: translate(0, -10px);
+        }
+        100% {
+          transform: translate(0, -0px);
+        }
+      }
+      
+      .fade-in {
+        animation: fadeIn 0.8s ease-in-out;
+      }
+      
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      
+      .slide-in-left {
+        animation: slideInLeft 0.8s ease-out;
+      }
+      
+      @keyframes slideInLeft {
+        from {
+          opacity: 0;
+          transform: translateX(-50px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+      
+      .slide-in-right {
+        animation: slideInRight 0.8s ease-out;
+      }
+      
+      @keyframes slideInRight {
+        from {
+          opacity: 0;
+          transform: translateX(50px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+    </style>
+  </head>
+  <body class="min-h-screen bg-white">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-lg border-b border-gray-200">
+      <div class="container mx-auto px-6">
+        <div class="flex items-center justify-between h-16">
+          <!-- Logo -->
+          <div class="flex items-center gap-2">
+            <div class="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+              <!-- Brain Icon SVG -->
+              <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+              </svg>
+            </div>
+            <span class="text-xl font-bold text-gray-900">Traidant</span>
+          </div>
+
+          <!-- Back to Home -->
+          <a 
+            href="/" 
+            class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium transition-colors"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+            </svg>
+            Back to Home
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-16 bg-gradient-to-br from-white via-gray-50 to-white relative overflow-hidden">
+      <!-- Background Elements -->
+      <div class="absolute top-0 left-0 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-0 right-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
+      
+      <!-- Floating Particles -->
+      <div class="absolute top-20 left-10 w-2 h-2 bg-blue-500 rounded-full pulse-animation"></div>
+      <div class="absolute top-40 right-20 w-1 h-1 bg-purple-500 rounded-full pulse-animation" style="animation-delay: 0.5s;"></div>
+      <div class="absolute bottom-40 left-20 w-1.5 h-1.5 bg-cyan-500 rounded-full pulse-animation" style="animation-delay: 1s;"></div>
+      
+      <div class="container mx-auto px-6 relative z-10">
+        <div class="text-center max-w-4xl mx-auto fade-in">
+          <!-- Badge -->
+          <div class="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-50 to-purple-50 border border-blue-200 rounded-full text-sm font-medium text-blue-700 mb-8">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+            </svg>
+            About Our Team
+          </div>
+          
+          <!-- Main Heading -->
+          <h1 class="text-4xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
+            <span class="block">Meet the Team Behind</span>
+            <span class="bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 bg-clip-text text-transparent block">
+              Traidant
+            </span>
+          </h1>
+          
+          <p class="text-xl lg:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-12">
+            We are passionate University of Amsterdam students revolutionizing investment strategies 
+            through cutting-edge artificial intelligence and machine learning technologies.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Company Background -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <!-- Left Content -->
+          <div class="slide-in-left">
+            <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+              Our Story
+            </h2>
+            <div class="space-y-6 text-lg text-gray-600 leading-relaxed">
+              <p>
+                Traidant was born from a shared vision among five ambitious University of Amsterdam students 
+                who recognized the transformative potential of artificial intelligence in financial markets.
+              </p>
+              <p>
+                As part of our "Project: Entrepreneurship" course, we embarked on a journey to create 
+                something that could genuinely impact how people approach investing. What started as an 
+                academic project quickly evolved into a comprehensive AI-powered investment platform.
+              </p>
+              <p>
+                Our diverse backgrounds in computer science, economics, and data science converged to 
+                create a unique perspective on financial technology. We saw an opportunity to democratize 
+                sophisticated investment strategies that were previously only available to institutional investors.
+              </p>
+            </div>
+          </div>
+          
+          <!-- Right Visual -->
+          <div class="slide-in-right">
+            <div class="relative">
+              <div class="bg-gradient-to-br from-gray-50 to-white rounded-3xl p-8 shadow-2xl border border-gray-200">
+                <!-- University Badge -->
+                <div class="flex items-center gap-4 mb-6">
+                  <div class="w-16 h-16 bg-gradient-to-r from-red-600 to-red-700 rounded-2xl flex items-center justify-center">
+                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"></path>
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path>
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="text-xl font-bold text-gray-900">University of Amsterdam</h3>
+                    <p class="text-gray-600">Project: Entrepreneurship Course</p>
+                  </div>
+                </div>
+                
+                <!-- Project Stats -->
+                <div class="grid grid-cols-2 gap-4">
+                  <div class="bg-blue-50 rounded-xl p-4 text-center">
+                    <div class="text-2xl font-bold text-blue-600">2025</div>
+                    <div class="text-sm text-gray-600">Founded</div>
+                  </div>
+                  <div class="bg-purple-50 rounded-xl p-4 text-center">
+                    <div class="text-2xl font-bold text-purple-600">5</div>
+                    <div class="text-sm text-gray-600">Team Members</div>
+                  </div>
+                  <div class="bg-green-50 rounded-xl p-4 text-center">
+                    <div class="text-2xl font-bold text-green-600">AI</div>
+                    <div class="text-sm text-gray-600">Powered</div>
+                  </div>
+                  <div class="bg-orange-50 rounded-xl p-4 text-center">
+                    <div class="text-2xl font-bold text-orange-600">∞</div>
+                    <div class="text-sm text-gray-600">Potential</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission & Values -->
+    <section class="py-16 bg-gradient-to-br from-gray-50 via-white to-gray-50">
+      <div class="container mx-auto px-6">
+        <div class="text-center max-w-3xl mx-auto mb-12 fade-in">
+          <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+            Our Mission & Values
+          </h2>
+          <p class="text-xl text-gray-600 leading-relaxed">
+            We believe in democratizing sophisticated investment strategies through accessible AI technology.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Mission -->
+          <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300 fade-in md:col-span-2 lg:col-span-3">
+            <div class="text-center mb-6">
+              <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-gray-900 mb-4">Our Mission</h3>
+              <p class="text-lg text-gray-600 leading-relaxed max-w-4xl mx-auto">
+                To empower individual investors with institutional-grade AI technology, making sophisticated 
+                investment strategies accessible to everyone. We strive to level the playing field in financial 
+                markets through innovation, transparency, and cutting-edge artificial intelligence.
+              </p>
+            </div>
+          </div>
+
+          <!-- Values -->
+          <div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300 fade-in">
+            <div class="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Innovation</h3>
+            <p class="text-gray-600 leading-relaxed">
+              Constantly pushing the boundaries of what's possible with AI and machine learning in finance.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300 fade-in" style="animation-delay: 0.1s;">
+            <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Transparency</h3>
+            <p class="text-gray-600 leading-relaxed">
+              Building trust through clear communication and honest reporting of our AI's capabilities and limitations.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300 fade-in" style="animation-delay: 0.2s;">
+            <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Accessibility</h3>
+            <p class="text-gray-600 leading-relaxed">
+              Making advanced investment tools available to everyone, regardless of their financial background or experience.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="text-center max-w-3xl mx-auto mb-12 fade-in">
+          <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+            Meet Our Team
+          </h2>
+          <p class="text-xl text-gray-600 leading-relaxed">
+            Five passionate students from the University of Amsterdam, united by a shared vision 
+            of transforming the investment landscape through AI innovation.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
+          <!-- Team Members -->
+          <div class="text-center fade-in">
+            <div class="w-32 h-32 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+              <span class="text-3xl font-bold text-white">D</span>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Daniil</h3>
+            <p class="text-gray-600">Co-Founder</p>
+          </div>
+
+          <div class="text-center fade-in" style="animation-delay: 0.1s;">
+            <div class="w-32 h-32 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+              <span class="text-3xl font-bold text-white">M</span>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Matei</h3>
+            <p class="text-gray-600">Co-Founder</p>
+          </div>
+
+          <div class="text-center fade-in" style="animation-delay: 0.2s;">
+            <div class="w-32 h-32 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+              <span class="text-3xl font-bold text-white">S</span>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Stan</h3>
+            <p class="text-gray-600">Co-Founder</p>
+          </div>
+
+          <div class="text-center fade-in" style="animation-delay: 0.3s;">
+            <div class="w-32 h-32 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+              <span class="text-3xl font-bold text-white">A</span>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Andrey</h3>
+            <p class="text-gray-600">Co-Founder</p>
+          </div>
+
+          <div class="text-center fade-in" style="animation-delay: 0.4s;">
+            <div class="w-32 h-32 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+              <span class="text-3xl font-bold text-white">R</span>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Razvan</h3>
+            <p class="text-gray-600">Co-Founder</p>
+          </div>
+        </div>
+
+        <!-- Team Description -->
+        <div class="mt-12 text-center max-w-4xl mx-auto">
+          <p class="text-lg text-gray-600 leading-relaxed">
+            Our team brings together diverse expertise in artificial intelligence, machine learning, 
+            financial markets, and software engineering. As equal co-founders, we each contribute our 
+            unique skills and perspectives to create a comprehensive AI-powered investment platform 
+            that serves investors of all levels.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- What Sets Us Apart -->
+    <section class="py-16 bg-gradient-to-br from-gray-50 via-white to-gray-50">
+      <div class="container mx-auto px-6">
+        <div class="text-center max-w-3xl mx-auto mb-12 fade-in">
+          <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+            What Sets Us Apart
+          </h2>
+          <p class="text-xl text-gray-600 leading-relaxed">
+            Our unique combination of academic rigor, entrepreneurial spirit, and cutting-edge technology 
+            creates a distinctive approach to AI-powered investing.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300 fade-in">
+            <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Academic Foundation</h3>
+            <p class="text-gray-600 leading-relaxed">
+              Built on rigorous academic research and cutting-edge methodologies from one of Europe's leading universities.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300 fade-in" style="animation-delay: 0.1s;">
+            <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Fresh Perspective</h3>
+            <p class="text-gray-600 leading-relaxed">
+              Unencumbered by traditional financial industry constraints, we approach problems with innovative solutions.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300 fade-in" style="animation-delay: 0.2s;">
+            <div class="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">AI-First Approach</h3>
+            <p class="text-gray-600 leading-relaxed">
+              Every feature and decision is powered by artificial intelligence, ensuring optimal performance and accuracy.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300 fade-in" style="animation-delay: 0.3s;">
+            <div class="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-xl flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">User-Centric Design</h3>
+            <p class="text-gray-600 leading-relaxed">
+              Designed by students, for everyone - we understand the need for intuitive, accessible financial tools.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300 fade-in" style="animation-delay: 0.4s;">
+            <div class="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-xl flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v4a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Continuous Learning</h3>
+            <p class="text-gray-600 leading-relaxed">
+              Our AI models continuously evolve and improve, learning from market patterns and user feedback.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300 fade-in" style="animation-delay: 0.5s;">
+            <div class="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Global Perspective</h3>
+            <p class="text-gray-600 leading-relaxed">
+              International team with diverse backgrounds, bringing global insights to local and international markets.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Location & Future -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <!-- Left Content -->
+          <div class="slide-in-left">
+            <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+              Based in Amsterdam
+            </h2>
+            <div class="space-y-6 text-lg text-gray-600 leading-relaxed">
+              <p>
+                Located at the heart of Europe's financial and technology hub, the University of Amsterdam 
+                provides us with access to world-class resources, mentorship, and a vibrant ecosystem of 
+                innovation and entrepreneurship.
+              </p>
+              <p>
+                Amsterdam's position as a leading fintech center, combined with the Netherlands' progressive 
+                approach to financial regulation and technology, creates the perfect environment for developing 
+                cutting-edge AI investment solutions.
+              </p>
+              <p>
+                While we're currently focused on building and refining our platform as part of our academic 
+                journey, we're excited about the potential to scale our impact and help investors worldwide 
+                achieve their financial goals through intelligent technology.
+              </p>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="mt-8 p-6 bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl border border-blue-200">
+              <h3 class="text-xl font-bold text-gray-900 mb-4">Get in Touch</h3>
+              <div class="space-y-3">
+                <div class="flex items-center gap-3">
+                  <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                  </svg>
+                  <span class="text-gray-700">University of Amsterdam, Netherlands</span>
+                </div>
+                <div class="flex items-center gap-3">
+                  <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                  </svg>
+                  <span class="text-gray-700">Project: Entrepreneurship Course</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Right Visual -->
+          <div class="slide-in-right">
+            <div class="relative">
+              <div class="bg-gradient-to-br from-gray-50 to-white rounded-3xl p-8 shadow-2xl border border-gray-200">
+                <!-- Amsterdam Illustration -->
+                <div class="text-center mb-6">
+                  <div class="w-24 h-24 bg-gradient-to-r from-red-600 to-red-700 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                    </svg>
+                  </div>
+                  <h3 class="text-2xl font-bold text-gray-900">University of Amsterdam</h3>
+                  <p class="text-gray-600">Innovation Hub</p>
+                </div>
+                
+                <!-- Future Milestones -->
+                <div class="space-y-4">
+                  <div class="flex items-center gap-3 p-3 bg-blue-50 rounded-lg">
+                    <div class="w-3 h-3 bg-blue-500 rounded-full"></div>
+                    <span class="text-sm text-gray-700">Academic project completion</span>
+                  </div>
+                  <div class="flex items-center gap-3 p-3 bg-purple-50 rounded-lg">
+                    <div class="w-3 h-3 bg-purple-500 rounded-full"></div>
+                    <span class="text-sm text-gray-700">Platform development & testing</span>
+                  </div>
+                  <div class="flex items-center gap-3 p-3 bg-green-50 rounded-lg">
+                    <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+                    <span class="text-sm text-gray-700">Future scaling opportunities</span>
+                  </div>
+                  <div class="flex items-center gap-3 p-3 bg-orange-50 rounded-lg">
+                    <div class="w-3 h-3 bg-orange-500 rounded-full"></div>
+                    <span class="text-sm text-gray-700">Global impact potential</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-gradient-to-br from-gray-900 via-black to-gray-900 relative overflow-hidden">
+      <!-- Background Elements -->
+      <div class="absolute top-0 left-0 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-0 right-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
+      
+      <div class="container mx-auto px-6 relative z-10">
+        <div class="text-center max-w-4xl mx-auto fade-in">
+          <h2 class="text-4xl lg:text-5xl font-bold text-white mb-6">
+            Join Our Journey
+          </h2>
+          
+          <p class="text-xl text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed">
+            Be part of the future of AI-powered investing. Follow our progress as we continue 
+            to innovate and build the next generation of investment technology.
+          </p>
+          
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a 
+              href="/"
+              class="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 group"
+            >
+              Explore Our Platform
+              <svg class="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+              </svg>
+            </a>
+            <a 
+              href="/demo.html"
+              class="inline-flex items-center justify-center px-8 py-4 border-2 border-gray-300 hover:border-gray-400 text-white font-semibold rounded-xl transition-all duration-300"
+            >
+              Watch Demo
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+      <div class="container mx-auto px-6">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+              <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+              </svg>
+            </div>
+            <span class="text-xl font-bold">Traidant</span>
+          </div>
+          
+          <p class="text-gray-400 text-sm">
+            © 2025 Traidant. All rights reserved.
+          </p>
+          
+          <div class="text-sm text-gray-400">
+            University of Amsterdam Student Project
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

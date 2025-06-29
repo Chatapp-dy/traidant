@@ -9,7 +9,7 @@ export function Header() {
   const navItems = [
     { label: 'Features', href: '/ai-features.html' },
     { label: 'Pricing', href: '#pricing' },
-    { label: 'About', href: '#about' },
+    { label: 'About', href: '/about.html' },
     { label: 'Contact', href: '#contact' }
   ];
 
@@ -46,21 +46,21 @@ export function Header() {
       transition={{ duration: 0.6 }}
       className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-lg border-b border-gray-200"
     >
-      <div className="w-full px-6 sm:px-8 lg:px-12 xl:px-16 2xl:px-24">
-        <div className="w-full">
-          <div className="flex items-center justify-between h-16 lg:h-20 xl:h-24">
+      <div className="w-full px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <div className="flex items-center">
-              <span className="text-xl lg:text-2xl xl:text-3xl font-bold text-gray-900">Traidant</span>
+              <span className="text-xl font-bold text-gray-900">Traidant</span>
             </div>
 
             {/* Desktop Navigation */}
-            <nav className="hidden md:flex items-center gap-8 lg:gap-12 xl:gap-16">
+            <nav className="hidden md:flex items-center gap-8">
               {navItems.map((item) => (
                 <button
                   key={item.label}
                   onClick={() => scrollToSection(item.href)}
-                  className="text-gray-600 hover:text-gray-900 font-medium transition-colors text-base lg:text-lg xl:text-xl"
+                  className="text-gray-600 hover:text-gray-900 font-medium transition-colors"
                 >
                   {item.label}
                 </button>
@@ -68,13 +68,13 @@ export function Header() {
             </nav>
 
             {/* Desktop CTA */}
-            <div className="hidden md:flex items-center gap-4 lg:gap-6 xl:gap-8">
-              <Button variant="ghost" className="text-gray-600 hover:text-gray-900 text-base lg:text-lg xl:text-xl">
+            <div className="hidden md:flex items-center gap-4">
+              <Button variant="ghost" className="text-gray-600 hover:text-gray-900">
                 Sign In
               </Button>
               <Button 
                 onClick={scrollToPricing}
-                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-4 lg:px-6 xl:px-8 py-2 lg:py-3 xl:py-4 text-base lg:text-lg xl:text-xl"
+                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white"
               >
                 Get Started
               </Button>
@@ -102,18 +102,18 @@ export function Header() {
                   <button
                     key={item.label}
                     onClick={() => scrollToSection(item.href)}
-                    className="text-gray-600 hover:text-gray-900 font-medium transition-colors py-2 text-left text-base"
+                    className="text-gray-600 hover:text-gray-900 font-medium transition-colors py-2 text-left"
                   >
                     {item.label}
                   </button>
                 ))}
                 <div className="flex flex-col gap-2 pt-4 border-t border-gray-200">
-                  <Button variant="ghost" className="justify-start text-base">
+                  <Button variant="ghost" className="justify-start">
                     Sign In
                   </Button>
                   <Button 
                     onClick={scrollToPricing}
-                    className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white text-base"
+                    className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white"
                   >
                     Get Started
                   </Button>
