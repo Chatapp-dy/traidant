@@ -93,15 +93,10 @@ export function Footer() {
           </div>
 
           {/* Bottom Section */}
-          <div className="border-t border-gray-800 mt-12 lg:mt-16 pt-8 lg:pt-10 flex flex-col md:flex-row justify-between items-center gap-4 lg:gap-6">
+          <div className="border-t border-gray-800 mt-12 lg:mt-16 pt-8 lg:pt-10 text-center">
             <p className="text-gray-400 text-sm lg:text-base xl:text-lg">
               © 2025 Traidant. All rights reserved.
             </p>
-            <div className="flex flex-wrap justify-center gap-4 md:gap-6 lg:gap-8 text-sm lg:text-base xl:text-lg text-gray-400">
-              <span>SEC Registered Investment Advisor</span>
-              <span>FINRA Member</span>
-              <span>SIPC Protected</span>
-            </div>
           </div>
         </div>
       </div>
