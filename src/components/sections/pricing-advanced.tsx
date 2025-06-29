@@ -44,9 +44,9 @@ const traidantPlans = [
   },
   {
     name: "ENTERPRISE",
-    price: "299",
-    yearlyPrice: "239",
-    period: "month",
+    price: "Contact Sales",
+    yearlyPrice: "Contact Sales",
+    period: "",
     features: [
       "Everything in Premium",
       "Custom AI model training",
