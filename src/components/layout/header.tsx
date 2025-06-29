@@ -46,21 +46,21 @@ export function Header() {
       transition={{ duration: 0.6 }}
       className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-lg border-b border-gray-200"
     >
-      <div className="w-full px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex items-center justify-between h-16">
+      <div className="w-full px-6 sm:px-8 lg:px-12 xl:px-16">
+        <div className="w-full max-w-none">
+          <div className="flex items-center justify-between h-16 lg:h-20">
             {/* Logo */}
             <div className="flex items-center">
-              <span className="text-xl font-bold text-gray-900">Traidant</span>
+              <span className="text-xl lg:text-2xl font-bold text-gray-900">Traidant</span>
             </div>
 
             {/* Desktop Navigation */}
-            <nav className="hidden md:flex items-center gap-8">
+            <nav className="hidden md:flex items-center gap-8 lg:gap-12">
               {navItems.map((item) => (
                 <button
                   key={item.label}
                   onClick={() => scrollToSection(item.href)}
-                  className="text-gray-600 hover:text-gray-900 font-medium transition-colors"
+                  className="text-gray-600 hover:text-gray-900 font-medium transition-colors text-base lg:text-lg"
                 >
                   {item.label}
                 </button>
@@ -68,13 +68,13 @@ export function Header() {
             </nav>
 
             {/* Desktop CTA */}
-            <div className="hidden md:flex items-center gap-4">
-              <Button variant="ghost" className="text-gray-600 hover:text-gray-900">
+            <div className="hidden md:flex items-center gap-4 lg:gap-6">
+              <Button variant="ghost" className="text-gray-600 hover:text-gray-900 text-base lg:text-lg">
                 Sign In
               </Button>
               <Button 
                 onClick={scrollToPricing}
-                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white"
+                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-4 lg:px-6 py-2 lg:py-3 text-base lg:text-lg"
               >
                 Get Started
               </Button>

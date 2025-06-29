@@ -28,9 +28,9 @@ export function HeroSection() {
       <div className="absolute bottom-60 left-40 w-1.5 h-1.5 bg-yellow-500 rounded-full animate-ping" style={{ animationDelay: '0.5s' }} />
       <div className="absolute top-32 left-1/2 w-1 h-1 bg-green-500 rounded-full animate-bounce" style={{ animationDelay: '1.5s' }} />
 
-      <div className="w-full px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-center">
+      <div className="w-full px-6 sm:px-8 lg:px-12 xl:px-16 relative z-10">
+        <div className="w-full max-w-none">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 xl:gap-24 items-center">
             {/* Left Content */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
@@ -55,7 +55,7 @@ export function HeroSection() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.3 }}
-                  className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight"
+                  className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold leading-tight"
                 >
                   <span className="text-gray-900">Invest</span>
                   <br />
@@ -70,7 +70,7 @@ export function HeroSection() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.4 }}
-                  className="text-lg sm:text-xl lg:text-2xl text-gray-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed"
+                  className="text-lg sm:text-xl lg:text-2xl xl:text-3xl text-gray-600 max-w-3xl mx-auto lg:mx-0 leading-relaxed"
                 >
                   Transform your investment strategy with Traidant's cutting-edge AI models. 
                   Get intelligent insights, automated analysis, and superior returns.
@@ -82,19 +82,19 @@ export function HeroSection() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5 }}
-                className="grid grid-cols-3 gap-4 sm:gap-6 lg:gap-8 max-w-lg mx-auto lg:mx-0"
+                className="grid grid-cols-3 gap-4 sm:gap-6 lg:gap-8 xl:gap-12 max-w-2xl mx-auto lg:mx-0"
               >
                 <div className="text-center lg:text-left">
-                  <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">98.7%</div>
-                  <div className="text-sm text-gray-500">Accuracy Rate</div>
+                  <div className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900">98.7%</div>
+                  <div className="text-sm lg:text-base text-gray-500">Accuracy Rate</div>
                 </div>
                 <div className="text-center lg:text-left">
-                  <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">$2.4B+</div>
-                  <div className="text-sm text-gray-500">Assets Managed</div>
+                  <div className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900">$2.4B+</div>
+                  <div className="text-sm lg:text-base text-gray-500">Assets Managed</div>
                 </div>
                 <div className="text-center lg:text-left">
-                  <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">15K+</div>
-                  <div className="text-sm text-gray-500">Active Users</div>
+                  <div className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900">15K+</div>
+                  <div className="text-sm lg:text-base text-gray-500">Active Users</div>
                 </div>
               </motion.div>
 
@@ -103,21 +103,21 @@ export function HeroSection() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6 }}
-                className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+                className="flex flex-col sm:flex-row gap-4 lg:gap-6 justify-center lg:justify-start"
               >
                 <Button 
                   size="lg" 
                   onClick={scrollToPricing}
-                  className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold group w-full sm:w-auto"
+                  className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 sm:px-8 lg:px-10 py-3 sm:py-4 lg:py-5 text-base sm:text-lg lg:text-xl font-semibold group w-full sm:w-auto"
                 >
                   Explore Subscriptions
-                  <ArrowRight className="ml-2 w-4 sm:w-5 h-4 sm:h-5 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="ml-2 w-4 sm:w-5 lg:w-6 h-4 sm:h-5 lg:h-6 group-hover:translate-x-1 transition-transform" />
                 </Button>
                 <Button 
                   variant="outline" 
                   size="lg"
                   onClick={openDemo}
-                  className="border-2 border-gray-300 hover:border-gray-400 px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold w-full sm:w-auto"
+                  className="border-2 border-gray-300 hover:border-gray-400 px-6 sm:px-8 lg:px-10 py-3 sm:py-4 lg:py-5 text-base sm:text-lg lg:text-xl font-semibold w-full sm:w-auto"
                 >
                   Watch Demo
                 </Button>
@@ -128,14 +128,14 @@ export function HeroSection() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.8 }}
-                className="flex items-center justify-center lg:justify-start gap-6 pt-4"
+                className="flex items-center justify-center lg:justify-start gap-6 lg:gap-8 pt-4"
               >
-                <div className="flex items-center gap-2 text-sm text-gray-500">
-                  <TrendingUp className="w-4 h-4 text-green-500" />
+                <div className="flex items-center gap-2 text-sm lg:text-base text-gray-500">
+                  <TrendingUp className="w-4 h-4 lg:w-5 lg:h-5 text-green-500" />
                   SEC Compliant
                 </div>
-                <div className="flex items-center gap-2 text-sm text-gray-500">
-                  <Brain className="w-4 h-4 text-blue-500" />
+                <div className="flex items-center gap-2 text-sm lg:text-base text-gray-500">
+                  <Brain className="w-4 h-4 lg:w-5 lg:h-5 text-blue-500" />
                   AI-Verified
                 </div>
               </motion.div>
@@ -148,7 +148,7 @@ export function HeroSection() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="relative order-1 lg:order-2"
             >
-              <div className="relative h-[400px] sm:h-[500px] lg:h-[600px] xl:h-[700px] rounded-3xl overflow-hidden bg-gradient-to-br from-gray-50 to-white border border-gray-200 shadow-2xl mx-auto max-w-md lg:max-w-none">
+              <div className="relative h-[400px] sm:h-[500px] lg:h-[600px] xl:h-[700px] 2xl:h-[800px] rounded-3xl overflow-hidden bg-gradient-to-br from-gray-50 to-white border border-gray-200 shadow-2xl">
                 {/* Glow Effect */}
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-cyan-500/10 rounded-3xl" />
                 

@@ -15,7 +15,7 @@ export function CTASection() {
   };
 
   return (
-    <section className="w-full py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-blue-50 via-white to-purple-50 relative overflow-hidden">
+    <section className="w-full py-16 sm:py-20 lg:py-24 xl:py-32 bg-gradient-to-br from-blue-50 via-white to-purple-50 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-purple-50" />
       <div className="absolute top-0 left-0 w-full h-72 bg-blue-500/10 rounded-full blur-3xl" />
@@ -27,15 +27,15 @@ export function CTASection() {
       <div className="absolute top-40 right-20 w-1 h-1 bg-purple-500 rounded-full animate-ping" />
       <div className="absolute bottom-40 left-20 w-1.5 h-1.5 bg-cyan-500 rounded-full animate-bounce" />
       
-      <div className="w-full px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="max-w-7xl mx-auto">
+      <div className="w-full px-6 sm:px-8 lg:px-12 xl:px-16 relative z-10">
+        <div className="w-full max-w-none">
           {/* Main Content */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center max-w-4xl mx-auto"
+            className="text-center max-w-5xl mx-auto"
           >
             {/* Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-100 to-purple-100 border border-blue-300 rounded-full text-sm font-medium text-blue-700 mb-8">
@@ -44,7 +44,7 @@ export function CTASection() {
             </div>
 
             {/* Main Heading */}
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold text-gray-900 mb-6 leading-tight">
               Start Your AI-Powered
               <br />
               <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 bg-clip-text text-transparent">
@@ -52,26 +52,26 @@ export function CTASection() {
               </span>
             </h2>
 
-            <p className="text-lg sm:text-xl lg:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg sm:text-xl lg:text-2xl xl:text-3xl text-gray-600 mb-12 max-w-4xl mx-auto leading-relaxed">
               Experience the future of investing with our advanced AI technology. 
               Start free and see the difference intelligent automation can make.
             </p>
 
             {/* Trust Indicators Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 mb-12 max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 xl:gap-12 mb-12 max-w-none">
               <motion.div 
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300"
+                className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 lg:p-8 xl:p-10 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300"
               >
                 <div className="flex items-center justify-center gap-3 mb-4">
-                  <Shield className="w-8 h-8 text-green-500" />
-                  <span className="text-2xl font-bold text-gray-900">SEC</span>
+                  <Shield className="w-8 h-8 lg:w-10 lg:h-10 text-green-500" />
+                  <span className="text-2xl lg:text-3xl xl:text-4xl font-bold text-gray-900">SEC</span>
                 </div>
-                <div className="text-gray-700 font-medium mb-2">Registered & Compliant</div>
-                <div className="text-sm text-gray-500">Fully regulated investment advisor</div>
+                <div className="text-gray-700 font-medium mb-2 text-base lg:text-lg">Registered & Compliant</div>
+                <div className="text-sm lg:text-base text-gray-500">Fully regulated investment advisor</div>
               </motion.div>
               
               <motion.div 
@@ -79,14 +79,14 @@ export function CTASection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.3 }}
-                className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300"
+                className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 lg:p-8 xl:p-10 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300"
               >
                 <div className="flex items-center justify-center gap-3 mb-4">
-                  <Users className="w-8 h-8 text-blue-500" />
-                  <span className="text-2xl font-bold text-gray-900">15K+</span>
+                  <Users className="w-8 h-8 lg:w-10 lg:h-10 text-blue-500" />
+                  <span className="text-2xl lg:text-3xl xl:text-4xl font-bold text-gray-900">15K+</span>
                 </div>
-                <div className="text-gray-700 font-medium mb-2">Active Investors</div>
-                <div className="text-sm text-gray-500">Growing community of success</div>
+                <div className="text-gray-700 font-medium mb-2 text-base lg:text-lg">Active Investors</div>
+                <div className="text-sm lg:text-base text-gray-500">Growing community of success</div>
               </motion.div>
               
               <motion.div 
@@ -94,14 +94,14 @@ export function CTASection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.4 }}
-                className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300"
+                className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 lg:p-8 xl:p-10 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300"
               >
                 <div className="flex items-center justify-center gap-3 mb-4">
-                  <TrendingUp className="w-8 h-8 text-purple-500" />
-                  <span className="text-2xl font-bold text-gray-900">98.7%</span>
+                  <TrendingUp className="w-8 h-8 lg:w-10 lg:h-10 text-purple-500" />
+                  <span className="text-2xl lg:text-3xl xl:text-4xl font-bold text-gray-900">98.7%</span>
                 </div>
-                <div className="text-gray-700 font-medium mb-2">AI Accuracy Rate</div>
-                <div className="text-sm text-gray-500">Industry-leading precision</div>
+                <div className="text-gray-700 font-medium mb-2 text-base lg:text-lg">AI Accuracy Rate</div>
+                <div className="text-sm lg:text-base text-gray-500">Industry-leading precision</div>
               </motion.div>
             </div>
 
@@ -111,7 +111,7 @@ export function CTASection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.5 }}
-              className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-8"
+              className="flex flex-col sm:flex-row gap-6 lg:gap-8 justify-center items-center mb-8"
             >
               <motion.div
                 whileHover={{ scale: 1.05 }}
@@ -120,10 +120,10 @@ export function CTASection() {
                 <Button 
                   size="lg"
                   onClick={scrollToPricing}
-                  className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 sm:px-12 py-4 sm:py-6 text-lg sm:text-xl font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group w-full sm:w-auto"
+                  className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 sm:px-12 lg:px-16 py-4 sm:py-6 lg:py-8 text-lg sm:text-xl lg:text-2xl font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group w-full sm:w-auto"
                 >
                   Get Started Free
-                  <ArrowRight className="ml-3 w-5 sm:w-6 h-5 sm:h-6 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="ml-3 w-5 sm:w-6 lg:w-7 h-5 sm:h-6 lg:h-7 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </motion.div>
 
@@ -135,7 +135,7 @@ export function CTASection() {
                   variant="outline"
                   size="lg"
                   onClick={openDemo}
-                  className="border-2 border-gray-300 hover:border-gray-400 text-gray-700 hover:bg-gray-50 px-8 sm:px-12 py-4 sm:py-6 text-lg sm:text-xl font-semibold rounded-xl transition-all duration-300 w-full sm:w-auto"
+                  className="border-2 border-gray-300 hover:border-gray-400 text-gray-700 hover:bg-gray-50 px-8 sm:px-12 lg:px-16 py-4 sm:py-6 lg:py-8 text-lg sm:text-xl lg:text-2xl font-semibold rounded-xl transition-all duration-300 w-full sm:w-auto"
                 >
                   View Demo
                 </Button>
@@ -148,22 +148,22 @@ export function CTASection() {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.7 }}
-              className="flex flex-wrap justify-center gap-6 text-sm text-gray-600 mb-8"
+              className="flex flex-wrap justify-center gap-6 lg:gap-8 text-sm lg:text-base text-gray-600 mb-8"
             >
               <div className="flex items-center gap-2">
-                <CheckCircle className="w-4 h-4 text-green-500" />
+                <CheckCircle className="w-4 h-4 lg:w-5 lg:h-5 text-green-500" />
                 <span>Free to start</span>
               </div>
               <div className="flex items-center gap-2">
-                <CheckCircle className="w-4 h-4 text-green-500" />
+                <CheckCircle className="w-4 h-4 lg:w-5 lg:h-5 text-green-500" />
                 <span>No credit card required</span>
               </div>
               <div className="flex items-center gap-2">
-                <CheckCircle className="w-4 h-4 text-green-500" />
+                <CheckCircle className="w-4 h-4 lg:w-5 lg:h-5 text-green-500" />
                 <span>Cancel anytime</span>
               </div>
               <div className="flex items-center gap-2">
-                <CheckCircle className="w-4 h-4 text-green-500" />
+                <CheckCircle className="w-4 h-4 lg:w-5 lg:h-5 text-green-500" />
                 <span>14-day premium trial</span>
               </div>
             </motion.div>
@@ -176,7 +176,7 @@ export function CTASection() {
               transition={{ duration: 0.6, delay: 0.8 }}
               className="pt-6 border-t border-gray-200"
             >
-              <p className="text-gray-500 text-sm">
+              <p className="text-gray-500 text-sm lg:text-base">
                 Trusted by investors worldwide • FINRA Member • SIPC Protected
               </p>
             </motion.div>
