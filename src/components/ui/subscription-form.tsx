@@ -6,7 +6,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Textarea } from '@/components/ui/textarea';
-import { Dialog, DialogContent, DialogOverlay } from '@/components/ui/dialog';
+import { Dialog, DialogContent, DialogOverlay, DialogTitle } from '@/components/ui/dialog';
 import { CheckCircle, X, User, Mail, Phone, Building, DollarSign, MessageSquare } from 'lucide-react';
 
 export type SubscriptionType = 'freemium' | 'premium' | 'enterprise' | 'general';
@@ -120,6 +120,7 @@ export function SubscriptionForm({ isOpen, onClose, subscriptionType }: Subscrip
       <Dialog open={isOpen} onOpenChange={onClose}>
         <DialogOverlay className="bg-black/50 backdrop-blur-sm" />
         <DialogContent className="max-w-md mx-auto">
+          <DialogTitle className="sr-only">Subscription Success</DialogTitle>
           <motion.div
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
@@ -157,6 +158,7 @@ export function SubscriptionForm({ isOpen, onClose, subscriptionType }: Subscrip
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogOverlay className="bg-black/50 backdrop-blur-sm" />
       <DialogContent className="max-w-2xl mx-auto max-h-[90vh] overflow-y-auto">
+        <DialogTitle className="sr-only">{config.title}</DialogTitle>
         <Card className="border-0 shadow-none">
           <CardHeader className="text-center pb-6">
             <div className="flex justify-between items-start mb-4">
